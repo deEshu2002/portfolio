@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+}
+
+html{
+    width: inherit;
+    height: inherit;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.string{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: move 7s forwards;
+    animation-delay: 1s;
+}
+
+
+.vector{
+    content: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.725 10.4978L14.725 15.4978L16.4833 13.6978L11.4833 8.69776L9.725 10.4978ZM12.825 6.16443C12.5 6.16443 12.15 6.12276 11.875 6.0061L2.38333 15.4561L0.625 13.6978L6.8 7.5311L5.325 6.04776L4.725 6.6311L3.51667 5.4561V7.83943L2.93333 8.42276L0 5.4561L0.583333 4.87276H2.925L1.75833 3.69776L4.725 0.731096C4.95546 0.499393 5.22944 0.315523 5.5312 0.190057C5.83296 0.0645897 6.15653 0 6.48333 0C6.81013 0 7.13371 0.0645897 7.43547 0.190057C7.73722 0.315523 8.01121 0.499393 8.24167 0.731096L6.48333 2.5311L7.65833 3.69776L7.06667 4.28943L8.55833 5.77276L10.075 4.2061C9.95833 3.9311 9.90833 3.5811 9.90833 3.27276C9.90502 2.88803 9.97808 2.50647 10.1233 2.15018C10.2685 1.79389 10.4829 1.46994 10.7542 1.19712C11.0255 0.924288 11.3482 0.707997 11.7037 0.560771C12.0591 0.413546 12.4403 0.338313 12.825 0.33943C13.3167 0.33943 13.75 0.456096 14.1417 0.68943L11.9167 2.91443L13.1667 4.16443L15.3917 1.93943C15.625 2.3311 15.7417 2.74776 15.7417 3.27276C15.7417 4.87276 14.45 6.16443 12.825 6.16443Z' fill='%23ffffff'/%3E%3C/svg%3E");
+    margin-bottom: 0.2rem;
+    display: block;
+    width: 25px;
+    height: 25px;
+} 
+
+.change{
+    position: relative;
+    top: 10.5vmin;
+    margin-left: 0.5rem;
+}
+
+.closure::before, .closure::after{
+  content: '';
+  position: absolute;
+  height: 25vmin;
+  width: 40vmin;
+  background: #000;
+}
+
+.closure::after{
+  transform: translate(-40vmin, -26.8vmin);
+}
+
+.closure::before{
+  transform: translate(-35vmin, 1.8vmin);
+}
+
+
+
+@keyframes move {
+  0%{
+    opacity: 1;
+  }
+    16.6% {
+        transform: translatey(-3.4vmin);
+      }
+    33.2% {
+        transform: translatey(-7vmin);
+      }
+    49.8% {
+        transform: translatey(-10.6vmin);
+      }
+    66.4%{
+        transform: translatey(-14.2vmin);
+      }
+    83%{
+        transform: translatey(-17.8vmin);
+      }
+    100%{
+        transform: translatey(-21.4vmin);
+
+      }
+}
