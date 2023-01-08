@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 3vmin;
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+}
+
+html{
+    width: inherit;
+    height: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: white;
+    overflow: hidden;
+}
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 2vmin;
+}
+
+.moveWrapper{
+    overflow: hidden;
+    width: 100%;
+    height: inherit;
+}
+
+.oddMove, .evenMove{
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+}
+
+.oddMove div, .evenMove div{
+    width: calc(100vmin/3 - 5vmin);
+    aspect-ratio: 9/12;
+    background-color: aliceblue;
+}
+
+.oddMove{
+    animation: moveFromTop linear 15s forwards;
+}
+
+.evenMove{
+    animation: moveFromBottom linear 15s forwards;
+}
+
+@keyframes moveFromTop {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(400%);
+    }
+}
+
+@keyframes moveFromBottom {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
+}

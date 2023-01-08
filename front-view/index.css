@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    animation: move 6s forwards;
+    animation: move 6s ease forwards;
     animation-delay: 1s;
 }
 
@@ -44,6 +44,7 @@ body {
     position: relative;
     top: 10.5vmin;
     margin-left: 0.5rem;
+    cursor: pointer;
 }
 
 .closure::before, .closure::after{
@@ -55,7 +56,7 @@ body {
 }
 
 .closure::after{
-  transform: translate(-40vmin, -26.8vmin);
+  transform: translate(-37vmin, -26.8vmin);
 }
 
 .closure::before{
